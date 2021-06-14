@@ -1,0 +1,90 @@
+<view class="cart">
+  <!-- Address -->
+  <view class="address_wrap">
+    <block wx:if="{{!address.userName}}">
+      <button class="add_address" bind:tap="addAddress">
+        + 添加收货地址
+      </button>
+    </block>
+    <block wx:else>
+      <view class="address_meg">
+        <view class="left">
+          <text class="user_name">{{address.userName}}</text>
+          <text class="user_address">{{address.userAddress}}</text>
+        </view>
+        <view class="right">
+          <text class="phone">{{address.telNumber}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 商品列表 -->
+  <view class="cart_goods_wrap">
+    <view class="title">
+      我的购物车
+    </view>
+    <view class="cart_goods" wx:if="{{cart.length > 0}}">
+      <view 
+        class="cart_goods_item"  
+        wx:for="{{cart}}"
+        wx:key="goods_id"
+      >
+        <view class="checkbox">
+          <checkbox-group bindchange="changeCheck" data-index="{{index}}">
+            <checkbox class="" value="" checked="{{item.isSelect}}" color="red" />
+          </checkbox-group>
+        </view>
+        <navigator 
+          class="goods_img" 
+          open-type="navigate" 
+          url="../goods_detail/index?goods_id={{item.goods_id}}"
+        >
+          <image 
+            src="{{item.pics[0].pics_sma_url}}" 
+            mode="widthFix" 
+            lazy-load="true" 
+          />
+        </navigator>
+        <view class="goods_info_wrap">
+          <view class="goods_info">{{item.goods_name}}</view>
+          <view class="goods_price_wrap">
+            <view class="goods_price">￥{{item.goods_price}}</view>
+            <view class="goods_edit">
+              <text class="btn decr" bind:tap="decreaseGood" data-index="{{index}}">-</text>
+              <text class="num">{{item.num}}</text>
+              <text class="btn incr" bind:tap="inceraseGood" data-index="{{index}}">+</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="cart_null" wx:else>
+      <view class="cart_null_img">
+        <image class="" src="../../static/image/cart_null.png" mode="widthFix" lazy-load="true" />
+      </view>
+      <text class="meg">
+        购物车空空如也
+      </text>
+    </view>
+  </view>
+  <!-- 底部结算栏 -->
+  <view class="account_bar">
+    <view class="all_check">
+      <checkbox-group bindchange="changeAllCheck">
+        <checkbox 
+          disabled="{{isAllSelectDisable}}" 
+          checked="{{isAllSelect}}" 
+          color="red" 
+        />
+      </checkbox-group>
+      <text>全选</text>
+    </view>
+    <view class="sum">
+      <text>合计: <text class="sum_price">￥ {{totalPrice}}</text></text>
+      <text class="tip">包含运费</text>
+    </view>
+    <view class="account">
+      <view bind:tap="handleAccount">结算 ({{accountNum}})</view>
+    </view>
+  </view>
+</view>

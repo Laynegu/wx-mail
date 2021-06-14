@@ -1,0 +1,27 @@
+<view class="search">
+  <view class="search_box">
+    <input 
+      type="text" 
+      value="{{inputVal}}" 
+      bindinput="handleInput"
+      placeholder="请输入关键词"
+    />
+    <button 
+      hidden="{{!isShowBtn}}" 
+      bind:tap="cancelSearch"
+    >
+      取消
+    </button>
+  </view>
+  <view class="search_list">
+    <navigator 
+      class="list_item" 
+      url="../goods_detail/index?goods_id={{item.goods_id}}" 
+      open-type="navigate"
+      wx:for="{{goods}}"
+      wx:key="goods_id"
+    >
+      {{item.goods_name}}
+    </navigator>
+  </view>
+</view>

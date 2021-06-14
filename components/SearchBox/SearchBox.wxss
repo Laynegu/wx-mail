@@ -1,0 +1,16 @@
+/* components/SearchBox/SearchBox.less */
+.search_box {
+  height: 90rpx;
+  background-color: var(--themeColor);
+  padding: 16rpx;
+}
+.search_box .navigator {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #cccccc;
+  border-radius: 30rpx;
+  font-size: 30rpx;
+}

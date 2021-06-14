@@ -1,0 +1,117 @@
+page {
+  background-color: #eeeeee;
+}
+.user_info_wrap {
+  position: relative;
+  width: 100%;
+  height: 45vh;
+}
+.user_info_wrap .login {
+  width: 100%;
+  height: 100%;
+}
+.user_info_wrap .login button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 40%;
+}
+.user_info_wrap .user_info,
+.user_info_wrap .user_info .user_img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.user_info .user_img image {
+  width: 120%;
+  height: 120%;
+  margin-left: -10%;
+  margin-top: -10%;
+  filter: blur(20rpx);
+}
+.user_info_wrap .user_info .user_avator {
+  width: 20%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32rpx;
+}
+.user_info .user_avator .user_icon {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.user_info .user_avator image {
+  height: 100%;
+}
+.user_info .user_avator .user_nickname {
+  margin-top: 60rpx;
+  color: #ffffff;
+}
+.user_goods_info_wrap {
+  position: relative;
+  margin-top: -60rpx;
+  padding: 0 30rpx 110rpx 30rpx;
+  font-size: 32rpx;
+  color: #888888;
+}
+.user_goods_info_wrap .goods_collect,
+.goods_order_wrap .goods_order {
+  display: flex;
+  background-color: #ffffff;
+}
+.goods_collect .goods_collect_item,
+.goods_order .goods_order_item {
+  margin: 10rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.goods_collect .goods_collect_item .num,
+.goods_order .goods_order_item .iconfont {
+  margin-bottom: 5rpx;
+  color: red;
+}
+.goods_order .goods_order_item .iconfont {
+  font-size: 46rpx;
+}
+.user_goods_info_wrap .goods_order_wrap,
+.user_goods_info_wrap .goods_address,
+.user_goods_info_wrap .goods_feedback,
+.user_goods_info_wrap .app_share {
+  margin-top: 30rpx;
+  background-color: #ffffff;
+}
+.goods_order_wrap .title,
+.user_goods_info_wrap .goods_address,
+.user_goods_info_wrap .app_share,
+.user_goods_info_wrap .goods_feedback .goods_feedback_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 15rpx;
+  border-bottom: 1rpx solid #cccccc;
+}
+.user_goods_info_wrap .goods_address,
+.user_goods_info_wrap .app_share {
+  border-bottom: none;
+}
+.user_goods_info_wrap .goods_address .indicator,
+.user_goods_info_wrap .goods_feedback .indicator,
+.user_goods_info_wrap .app_share .indicator {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 20rpx;
+  border-top: 5rpx solid #cccccc;
+  border-right: 5rpx solid #cccccc;
+  transform: rotate(45deg);
+}

@@ -1,0 +1,5 @@
+<view class="auth">
+  <view class="auth_wrap">
+    <button type="primary" plain="{{true}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取授权</button>
+  </view>
+</view>

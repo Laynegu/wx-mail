@@ -1,0 +1,52 @@
+page {
+  height: 100%;
+}
+.cate_wrap {
+  display: flex;
+  height: 100%;
+}
+.cate_wrap .cate_class,
+.cate_wrap .cate_detail {
+  height: calc( 100vh - 90rpx );
+}
+.cate_wrap .cate_class {
+  flex: 2;
+}
+.cate_wrap .cate_detail {
+  flex: 6;
+  /* 滚动锚定 */
+  overflow-anchor: none;
+}
+.cate_wrap .cate_class .cate_class_item {
+  width: 100%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #cccccc;
+  background-color: #f4f4f4;
+}
+.cate_wrap .cate_class .active {
+  color: var(--themeColor);
+  border-left: 5rpx solid var(--themeColor);
+  background-color: #ffffff;
+}
+.cate_detail .cate_detail_item .content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cate_detail .cate_detail_item .title {
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+.cate_detail .title .split {
+  margin: 30rpx;
+  color: #cccccc;
+  font-weight: 500;
+}
+.cate_detail .cate_detail_item .content_item {
+  width: 33%;
+  padding: 30rpx 40rpx;
+  text-align: center;
+}

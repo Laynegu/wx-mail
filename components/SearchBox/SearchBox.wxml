@@ -1,0 +1,5 @@
+<view class="search_box">
+  <navigator class="navigator" target="self" url="../../pages/search/index" hover-class="navigator-hover" open-type="navigate">
+    <slot ></slot>
+  </navigator>
+</view>

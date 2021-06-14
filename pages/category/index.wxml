@@ -1,0 +1,52 @@
+<view class="category">
+  <!-- 搜索框 -->
+  <SearchBox>
+    <text class="iconfont icon-sousuo"></text>
+    搜索
+  </SearchBox>
+  <view class="cate_wrap clearfix">
+    <scroll-view class="cate_class" scroll-y="true">
+      <view class="cate_class_item {{currentIndex === index? 'active' : ''}}"
+        wx:for="{{classList}}"
+        wx:key="cat_id"
+        data-cateId="{{item.cat_id}}"
+        data-index="{{index}}"
+        bind:tap="changCateClass"
+      >
+        {{item.cat_name}}
+      </view>
+    </scroll-view>
+    <scroll-view class="cate_detail" 
+      scroll-y="true" 
+      scroll-top="{{scrollTop}}" 
+      scroll-anchoring="true"
+    >
+      <view class="cate_detail_item"
+        wx:for="{{detailList}}"
+        wx:key="index"
+        wx:for-item="detailItem"
+      >
+        <view class="title">
+          <text class="split">/</text>
+          <text>{{detailItem.cat_name}}</text>
+          <text class="split">/</text>
+        </view>
+        <view class="content">
+          <view class="content_item"
+            wx:for="{{detailItem.children}}"
+            wx:for-item="detailChild"
+            wx:key="cat_id"
+          >
+            <navigator 
+              url="../goods_list/index?cid={{detailChild.cat_id}}"
+              open-type="navigate"
+            >
+              <image class="cateIcon" src="{{detailChild.cat_icon}}" mode="widthFix" lazy-load="true" />
+            </navigator>
+            <text class="desc">{{detailChild.cat_name}}</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

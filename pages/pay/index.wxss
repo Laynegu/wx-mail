@@ -1,0 +1,105 @@
+.address_wrap {
+  padding: 20rpx;
+}
+.address_wrap .address_meg {
+  display: flex;
+  justify-content: space-between;
+}
+.address_wrap .address_meg .left {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.address_meg .left .user_name {
+  padding-bottom: 5rpx;
+}
+.cart_goods_wrap {
+  font-size: 36rpx;
+  border-top: 15rpx solid #eeeeee;
+}
+.cart_goods_wrap .title {
+  height: 85rpx;
+  padding-left: 20rpx;
+  line-height: 85rpx;
+  border-bottom: 1rpx solid #cccccc;
+}
+.cart_goods_wrap .cart_goods {
+  padding-bottom: 100rpx;
+}
+.cart_goods .cart_goods_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20rpx;
+  border-bottom: 1rpx solid #cccccc;
+}
+.cart_goods_item .goods_img {
+  flex: 1;
+  padding: 0 30rpx;
+}
+.cart_goods_item .goods_info_wrap {
+  width: 400rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 32rpx;
+}
+.cart_goods_item .goods_info_wrap .goods_info {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.cart_goods_item .goods_info_wrap .goods_price_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 35rpx;
+}
+.goods_price_wrap .goods_price {
+  color: red;
+}
+.goods_price_wrap .goods_edit text {
+  display: inline-block;
+  width: 55rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+  text-align: center;
+}
+.goods_price_wrap .goods_edit .num {
+  margin: 0 5rpx;
+}
+.account_bar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  border-top: 1rpx solid #cccccc;
+  font-size: 34rpx;
+  background-color: #ffffff;
+}
+.account_bar .sum {
+  flex: 2;
+  padding-right: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+}
+.account_bar .sum .sum_price {
+  color: red;
+}
+.account_bar .sum .tip {
+  padding-top: 5rpx;
+  font-size: 24rpx;
+  color: #888888;
+}
+.account_bar .account {
+  flex: 1;
+  text-align: center;
+  color: #ffffff;
+  line-height: 100rpx;
+  background-color: red;
+}

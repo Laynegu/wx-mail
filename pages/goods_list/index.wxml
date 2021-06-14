@@ -1,0 +1,33 @@
+<view class="goods_list">
+  <SearchBox>
+    <text class="iconfont icon-sousuo"></text>
+    搜索
+  </SearchBox>
+  <Tabs tabs="{{tabs}}" bind:tabsItemChangeEvent="handleTabsItem">
+    <view class="goods_wrap">
+      <navigator 
+        class="goods_item"
+        wx:for="{{goods}}"
+        wx:key="goods_id" 
+        url="../goods_detail/index?goods_id={{item.goods_id}}" 
+        open-type="navigate"
+      >
+        <view class="item_img">
+          <image 
+            src="{{item.goods_small_logo? item.goods_small_logo : '../../icons/_img.png'}}" 
+            mode="widthFix" 
+            lazy-load="true" 
+          />
+        </view>
+        <view class="item_meg">
+          <view class="item_name">
+            {{item.goods_name}}
+          </view>
+          <view class="item_price">
+            ￥{{item.goods_price}}
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </Tabs>
+</view>

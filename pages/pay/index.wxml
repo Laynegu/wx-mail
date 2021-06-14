@@ -1,0 +1,46 @@
+<view class="pay">
+  <!-- Address -->
+  <view class="address_wrap">
+    <view class="address_meg">
+      <view class="left">
+        <text class="user_name">{{address.userName}}</text>
+        <text class="user_address">{{address.userAddress}}</text>
+      </view>
+      <view class="right">
+        <text class="phone">{{address.telNumber}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 商品列表 -->
+  <view class="cart_goods_wrap">
+    <view class="title">我的购物车</view>
+    <view class="cart_goods">
+      <view class="cart_goods_item" wx:for="{{cart}}" wx:key="goods_id">
+        <navigator class="goods_img" open-type="navigate" url="../goods_detail/index?goods_id={{item.goods_id}}">
+          <image src="{{item.pics[0].pics_sma_url}}" mode="widthFix" lazy-load="true" />
+        </navigator>
+        <view class="goods_info_wrap">
+          <view class="goods_info">{{item.goods_name}}</view>
+          <view class="goods_price_wrap">
+            <view class="goods_price">￥{{item.goods_price}}</view>
+            <view class="goods_edit">
+              <text class="num">X {{item.num}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 底部结算栏 -->
+  <view class="account_bar">
+    <view class="sum">
+      <view>
+        合计: <text class="sum_price">￥ {{totalPrice}}</text>
+      </view>
+      <view class="tip">包含运费</view>
+    </view>
+    <view class="account">
+      <view bind:tap="handlePay">支付 ({{accountNum}})</view>
+    </view>
+  </view>
+</view>

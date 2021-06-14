@@ -1,0 +1,81 @@
+<view class="user_info_wrap">
+  <view class="user_info" wx:if="{{userInfo.nickName}}">
+    <view class="user_img">
+      <image src="{{userInfo.avatarUrl}}" mode="scaleToFill" lazy-load="true" />
+    </view>
+    <view class="user_avator">
+      <view class="user_icon">
+        <image src="{{userInfo.avatarUrl}}" mode="widthFix" lazy-load="true" />
+      </view>
+      <view class="user_nickname">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view class="login" wx:else>
+    <button plain="{{true}}" type="primary" bindgetuserinfo="login" open-type="getUserInfo">
+      登录
+    </button>
+  </view>
+</view>
+<view class="user_goods_info_wrap">
+  <view class="goods_collect">
+    <view class="goods_collect_item">
+      <text class="num">0</text>
+      <text>收藏的店铺</text>
+    </view>
+    <view class="goods_collect_item">
+      <text class="num">0</text>
+      <text>收藏的商品</text>
+    </view>
+    <view class="goods_collect_item">
+      <text class="num">0</text>
+      <text>关注的商品</text>
+    </view>
+    <view class="goods_collect_item">
+      <text class="num">0</text>
+      <text>我的足迹</text>
+    </view>
+  </view>
+  <view class="goods_order_wrap">
+    <view class="title">我的订单</view>
+    <view class="goods_order">
+      <view class="goods_order_item">
+        <text class="iconfont icon-quanbudingdan"></text>
+        <text>全部订单</text>
+      </view>
+      <view class="goods_order_item">
+        <text class="iconfont icon-daifukuan"></text>
+        <text>待付款</text>
+      </view>
+      <view class="goods_order_item">
+        <text class="iconfont icon-daishouhuo"></text>
+        <text>待收货</text>
+      </view>
+      <view class="goods_order_item">
+        <text class="iconfont icon-tuikuan"></text>
+        <text>退款/退货</text>
+      </view>
+    </view>
+  </view>
+  <view class="goods_address">
+    <text>收货地址管理</text>
+    <view class="indicator"></view>
+  </view>
+  <view class="goods_feedback">
+    <view class="goods_feedback_item contact">
+      <text>联系客服</text>
+      <text>400-618-4000</text>
+    </view>
+    <view class="goods_feedback_item suggest">
+      <text>意见反馈</text>
+      <view class="indicator"></view>
+    </view>
+    <view class="goods_feedback_item about">
+      <text>关于我们</text>
+      <view class="indicator"></view>
+    </view>
+  </view>
+  <view class="app_share">
+    <text>把应用推荐给其他人</text>
+    <view class="indicator"></view>
+  </view>
+</view>

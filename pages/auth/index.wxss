@@ -1,0 +1,6 @@
+.auth .auth_wrap {
+  padding: 20rpx;
+}
+.auth .auth_wrap button {
+  width: 80%;
+}

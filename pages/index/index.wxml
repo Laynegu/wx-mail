@@ -1,0 +1,73 @@
+<view>
+  <!-- 搜索框 -->
+  <SearchBox>
+    <text class="iconfont icon-sousuo"></text>
+    搜索
+  </SearchBox>
+  <!-- 轮播图 -->
+  <view class="index_swiper_wrap">
+    <swiper
+      indicator-dots="{{true}}"
+      indicator-color="rgba(255, 255, 255, .4)"
+      indicator-active-color="#ffffff"
+      autoplay="{{true}}"
+      circular="{{true}}"
+    >
+      <swiper-item
+        wx:for="{{swiperList}}"
+        wx:key="goods_id"
+      >
+        <navigator url="../goods_detail/index?goods_id={{item.goods_id}}" open-type="navigate">
+          <image class="" src="{{item.image_src}}" mode="widthFix" lazy-load="true" />
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 导航栏 -->
+  <view class="index_navBar">
+    <navigator class="" url="" open-type=""
+      wx:for="{{navList}}"
+      wx:key="name"
+    >
+      <image class="" src="{{item.image_src}}" mode="widthFix" lazy-load="true" />
+    </navigator>
+  </view>
+  <!-- 楼层 -->
+  <view class="index_floor_wrap">
+    <view class="index_floor"
+      wx:for="{{floorList}}"
+      wx:for-item="floor"
+      wx:key="index"
+    >
+      <view class="index_floor_title">
+        <image src="{{floor.floor_title.image_src}}" mode="widthFix" lazy-load="true" />
+      </view>
+      <view class="index_floor_list">
+        <view class="left">
+          <navigator 
+            open-type="navigate"
+            url="../goods_list/index?{{floor.product_list[0].navigator_url}}"
+          >
+            <image class="product_img" src="{{floor.product_list[0].image_src}}" mode="widthFix" lazy-load="true" />
+          </navigator>
+        </view>
+        <view class="right">
+          <block
+            wx:for="{{floor.product_list}}"
+            wx:for-item="product"
+            wx:key="name"
+          >
+            <block wx:if="{{index > 0}}">
+              <navigator 
+                open-type="navigate" 
+                url="../goods_list/index?{{product.navigator_url}}"
+              >
+                <image class="product_img" src="{{product.image_src}}" mode="scaleToFill" lazy-load="true" />               
+              </navigator>
+            </block>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

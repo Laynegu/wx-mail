@@ -1,0 +1,33 @@
+/* 引入字体样式 */
+@import './styles/iconfont.wxss';
+
+/* 清除全局样式 */
+page, view, text, image, navigator, swiper, swiper-item {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 定义全局变量 */
+page {
+  --themeColor: #1ba508;
+  font-size: 28rpx;
+}
+
+/* 清除浮动 */
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+image {
+  width: 100%;
+}
