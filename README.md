@@ -8,7 +8,7 @@
 
 ### 项目预览
 
-<img src="E:\desktop\files\html\project\wechat\gulf_mail\static\image\mail_detail.PNG" alt="mail_detail" style="zoom:50%;margin:30px" /><img src="E:\desktop\files\html\project\wechat\gulf_mail\static\image\mail_index.PNG" alt="mail_index" style="zoom: 50%;margin:30px" /><img src="E:\desktop\files\html\project\wechat\gulf_mail\static\image\mail_my.PNG" alt="mail_my" style="zoom:50%; margin:30px" /><img src="E:\desktop\files\html\project\wechat\gulf_mail\static\image\mail_search.PNG" alt="mail_search" style="zoom:50%;margin:30px" /><img src="E:\desktop\files\html\project\wechat\gulf_mail\static\image\mail_car.PNG" alt="mail_car" style="zoom:50%;margin:30px" /><img src="E:\desktop\files\html\project\wechat\gulf_mail\static\image\mail_list.PNG" alt="mail_list" style="zoom:50%;margin:30px" /><img src="E:\desktop\files\html\project\wechat\gulf_mail\static\image\mail_category.PNG" alt="mail_category" style="zoom:50%;margin:30px" />
+<img src=".\static\image\mail_detail.PNG" alt="mail_detail" style="zoom:50%;margin:30px" /><img src=".\static\image\mail_index.PNG" alt="mail_index" style="zoom: 50%;margin:30px" /><img src=".\static\image\mail_my.PNG" alt="mail_my" style="zoom:50%; margin:30px" /><img src=".\static\image\mail_search.PNG" alt="mail_search" style="zoom:50%;margin:30px" /><img src=".\static\image\mail_car.PNG" alt="mail_car" style="zoom:50%;margin:30px" /><img src=".\static\image\mail_list.PNG" alt="mail_list" style="zoom:50%;margin:30px" /><img src=".\static\image\mail_category.PNG" alt="mail_category" style="zoom:50%;margin:30px" />
 
 
 
